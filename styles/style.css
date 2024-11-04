@@ -10,12 +10,9 @@
 :root {
   --color-primary: #afcedd;
   --color-primary-text: #234894;
-  --button-bg: #26a69a;
-  --button-text: #ffffff;
-  --title-text: #000000;
-  --id-text: #6d6d6d;
-  --username-text: #000000;
-  --border-color: #26a69a;
+  --color-scondary: #26a69a;
+  --color-white: #ffffff;
+  --color-text: #000000;
   --color-gray: #696969;
 }
 .html {
@@ -24,16 +21,9 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 6.4rem;
-  margin: 3rem;
-}
-@media screen and(min-width:600px) {
-  .card {
-  }
-}
-@media screen and(min-width:900px) {
-  .card {
-  }
+  gap: 3rem;
+
+  
 }
 .card--header {
   font-size: 2.2rem;
@@ -43,15 +33,13 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1.6rem;
-}
 
-/* Medium screens: 2 columns */
+}
 @media screen and (min-width: 600px) {
   .card--body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media screen and (min-width: 900px) {
   .card--body {
     grid-template-columns: repeat(3, 1fr);
@@ -108,8 +96,8 @@
 }
 
 .request-card__button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
+  background-color: var(--color-scondary);
+  color: var(--color-white);
   border: none;
   border-radius: 0.8rem;
   padding: 1rem 2rem;
@@ -133,12 +121,14 @@
 .request-card__title {
   font-size: 1.8rem;
   font-weight: 900;
-  color: var(--title-text);
+  color: var(--color-text);
+ white-space: nowrap;
 }
 
 .request-card__id {
   font-size: 1.4rem;
   color: var(--color-gray);
+  white-space: nowrap;
 }
 
 /* user */
@@ -149,8 +139,8 @@
 }
 
 .request-card__avatar {
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -158,5 +148,5 @@
 .request-card__username {
   font-size: 1.6rem;
   font-weight: 500;
-  color: var(--username-text);
+  color: var(--color-text);
 }
